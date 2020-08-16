@@ -31,6 +31,11 @@ import { LoginComponent } from './login/login.component';
 
 import {MatDialogModule} from '@angular/material/dialog';
 
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms'
+
 
 //Decorator: Is a function that modifies js classes
 @NgModule({ // Allow you spcify some details about the module
@@ -49,7 +54,11 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatCardModule,
     MatButtonModule,
     FontAwesomeModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule, 
+    MatInputModule,
+    MatCheckboxModule,
+    FormsModule 
   ],
   providers: [DishService, PromotionService, LeaderService], //services
   bootstrap: [AppComponent],
