@@ -27,12 +27,16 @@ import { ContactComponent } from './contact/contact.component';
 
 import { PromotionService } from './services/promotion.service';
 import { LeaderService } from './services/leader.service';
+import { LoginComponent } from './login/login.component';
+
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 //Decorator: Is a function that modifies js classes
 @NgModule({ // Allow you spcify some details about the module
   //Metadata
   declarations: [ //components, directives and pipes
-    AppComponent, MenuComponent, DishdetailComponent, HeaderComponent, FooterComponent, HomeComponent, AboutComponent, ContactComponent
+    AppComponent, MenuComponent, DishdetailComponent, HeaderComponent, FooterComponent, HomeComponent, AboutComponent, ContactComponent, LoginComponent
   ],
   imports: [ //third party modules
     BrowserModule,
@@ -44,11 +48,15 @@ import { LeaderService } from './services/leader.service';
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatDialogModule
   ],
   providers: [DishService, PromotionService, LeaderService], //services
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
   //The root Module doesn't have exports
+  entryComponents: [
+    LoginComponent
+  ]
 })
 //Each module is a class
 export class AppModule { }
