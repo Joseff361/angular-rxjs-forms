@@ -10,16 +10,16 @@ export class DishService {
 
   constructor() { }
 
-  getDishes(): Dish[]{
-    return DISHES;
+  getDishes(): Promise<Dish[]>{
+    return Promise.resolve(DISHES);
   }
 
   //The filter returns a sub-array
-  getDish(id: String ): Dish{
-    return DISHES.filter((dish) => (dish.id === id))[0]; //first element from the array
+  getDish(id: String ): Promise<Dish>{
+    return Promise.resolve(DISHES.filter((dish) => (dish.id === id))[0]); //first element from the array
   }
 
-  getFeatureDish( ): Dish{
-    return DISHES.filter((dish) => dish.featured)[0]; //If exists
+  getFeatureDish( ): Promise<Dish>{
+    return Promise.resolve(DISHES.filter((dish) => dish.featured)[0]); //If exists
   }
 }
