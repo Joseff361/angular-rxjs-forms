@@ -40,6 +40,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSliderModule } from '@angular/material/slider';
 
 
 //Decorator: Is a function that modifies js classes
@@ -67,7 +68,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     ReactiveFormsModule,
     MatSelectModule,
     MatSlideToggleModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSliderModule
   ],
   providers: [DishService, PromotionService, LeaderService], //services
   bootstrap: [AppComponent],
