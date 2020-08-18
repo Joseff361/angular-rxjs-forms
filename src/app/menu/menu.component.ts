@@ -19,7 +19,7 @@ export class MenuComponent implements OnInit {
   //lifeCycle method
   ngOnInit(): void { //will be executed whenever this component is created
     this.dishService.getDishes()
-    .then((dishes)=> this.dishes = dishes );
+    .subscribe((dishes)=> this.dishes = dishes );
   }
 
   
