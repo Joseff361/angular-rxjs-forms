@@ -40,7 +40,9 @@ export class DishdetailComponent implements OnInit {
       'minlength': 'First Name must be at least 2 characters long.'
     },
     'comment': {
-      'required' : 'Comment is required.'
+      'required' : 'Comment is required.',
+      'minlength':  'Comment must be at least 2 characters long.',
+      'maxlength':  'Comment cannot be more than 200 characters long.'
     }
   };
   
